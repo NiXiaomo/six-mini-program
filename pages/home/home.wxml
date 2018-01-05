@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <block wx:for="{{articleArr}}">
+            <view class="weui-panel weui-panel_access">
+                <view class="weui-panel__bd">
+                    <view class="weui-media-box weui-media-box_text">
+                        <view class="weui-cell weui-cell_access">
+                            <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+                                <image class="avatar" src="../../imgs/icon/logo@white.png" />
+                            </view>
+                            <view class="weui-cell__bd">
+                                <navigator url='/pages/article/article?id={{item.id}}' class='article-title'>{{item.title}}</navigator>
+                                <view style="font-size: 13px;color: #888888;">{{item.update_time}}</view>
+                            </view>
+                        </view>
+                        <view class="weui-media-box__desc">{{item.body}}</view>
+                    </view>
+                </view>
+                <view class="weui-panel__ft">
+                    <view class="weui-cell" data-id='{{item.id}}'>
+                        已添加「
+                        <block wx:for="{{item.tags}}" wx:for-item='tag'>
+                            <text class='article-tag'>{{tag.name}}</text>
+                        </block>
+                        」共{{item.tags.length}}个标签
+                    </view>
+                </view>
+            </view>
+        </block>
+        <!-- <view wx:if='{{isLoadedAll}}' class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有更多数据</view>
+        </view>
+        <view wx:else class="weui-loadmore">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+        </view> -->
+    </view>
+</view>

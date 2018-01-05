@@ -1,0 +1,30 @@
+<!--pages/link/link.wxml-->
+<view class="page">
+    <view class="page__bd page__bd_spacing">
+        <view class="kind-list">
+            <block wx:for="{{linkArr}}" wx:key="id">
+                <view class="kind-list__item">
+                    <view id="{{item.id}}" class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}" bindtap="kindToggle">
+                        <view class="weui-flex__item">{{item.name}}</view>
+                        <image class="kind-list__img" src="../../imgs/icon/icon_nav_form.png"></image>
+                    </view>
+                    <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
+                        <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
+                            <block wx:for="{{item.links}}" wx:for-item="link" wx:key="*this">
+                                <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                                    <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+                                        <image class="avatar" src="{{link.logo_url}}" />
+                                    </view>
+                                    <view class="weui-cell__bd">
+                                        <view>{{link.name}}</view>
+                                        <view class="weui-media-box__desc">{{link.intro}}</view>
+                                    </view>
+                                </view>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

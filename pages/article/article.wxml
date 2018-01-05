@@ -1,0 +1,14 @@
+<!--pages/article/article.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">{{article.title}}</view>
+        <view class="page__desc">{{article.time}}</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__p">
+                {{article.body}}
+            </view>
+        </view>
+    </view>
+</view>

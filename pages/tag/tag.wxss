@@ -1,0 +1,23 @@
+/* pages/tag/tag.wxss */
+
+.tag-body {
+    padding: 10px;
+}
+
+.tag-item {
+    margin: 5px;
+    padding: 0 10px;
+    text-align: center;
+    height: 2.3em;
+    line-height: 2.3em;
+    float: left;
+    border-radius: 4px;
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border: 1px solid #faebcc;
+    font-size: 26rpx;
+}
+
+.tag-item_active {
+    background-color: #faebcc;
+}

@@ -1,0 +1,38 @@
+/**index.wxss**/
+
+.page__bd {
+    padding: 0;
+}
+
+.article-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.article-tag {
+    margin-right: 10rpx;
+    color: #337ab7;
+}
+
+.weui-panel__bd .weui-cell {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.weui-panel__ft .weui-cell {
+    font-size: 14px;
+    color: #333;
+    border-top: 1px #eaeaea solid;
+}
+
+.weui-media-box__desc {
+    color: #333;
+    font-size: 14px;
+}
+
+.weui-loadmore__tips_in-line {
+    background-color: #f8f8f8;
+}

@@ -1,0 +1,55 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/timeline/timeline",
+        "pages/tag/tag",
+        "pages/link/link",
+        "pages/article/article"
+    ],
+    "window": {
+        "backgroundColor": "#FFFFFF",
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#6E564A",
+        "navigationBarTitleText": "六画",
+        "navigationBarTextStyle": "#FFFFFF"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "iconPath": "imgs/toolbar/home.png",
+                "selectedIconPath": "imgs/toolbar/home@selected.png",
+                "text": "主页"
+            },
+            {
+                "pagePath": "pages/timeline/timeline",
+                "iconPath": "imgs/toolbar/category.png",
+                "selectedIconPath": "imgs/toolbar/category@selected.png",
+                "text": "时间轴"
+            },
+            {
+                "pagePath": "pages/tag/tag",
+                "iconPath": "imgs/toolbar/cart.png",
+                "selectedIconPath": "imgs/toolbar/cart@selected.png",
+                "text": "标签库"
+            },
+            {
+                "pagePath": "pages/link/link",
+                "iconPath": "imgs/toolbar/my.png",
+                "selectedIconPath": "imgs/toolbar/my@selected.png",
+                "text": "联系人"
+            }
+        ],
+        "backgroundColor": "#FFFFFF",
+        "selectedColor": "#AB956D",
+        "color": "#989898",
+        "borderStyle": "white",
+        "position": "bottom"
+    },
+    "networkTimeout": {
+        "request": 20000,
+        "connectSocket": 20000,
+        "uploadFile": 20000,
+        "downloadFile": 20000
+    }
+}

@@ -1,0 +1,12 @@
+<!--pages/tag/tag.wxml-->
+<view class='page'>
+    <view class="page__bd">
+        <view class="tag-body">
+            <block wx:for="{{tagArr}}">
+                <view class="tag-item" hover-class="tag-item_active">
+                    <text>{{item.name}}（{{item.count}}）</text>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

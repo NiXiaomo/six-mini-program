@@ -1,0 +1,26 @@
+<!--pages/timeline/timeline.wxml-->
+<import src='../tpls/timeline/timeline-tpl.wxml' />
+
+<view class='page timeline-container'>
+    <view class='timeline-box'>
+        <!--归档列表-->
+        <view class='left-box'>
+            <block wx:for='{{timelineArr}}'>
+                <view style="position: relative;">
+                    <view class='menu-item {{currentMenuIndex==index?"selected":""}}' data-index="{{index}}" data-time='{{item.month}}' bindtap='changeTimeline'>
+                        {{item.month}}
+                    </view>
+                    <view class="weui-badge" style="position: absolute;top: .4em;right: .2em;">
+                        {{item.count}}
+                    </view>
+                </view>
+            </block>
+        </view>
+        <!--归档文章-->
+        <view class="right-box">
+            <view class="foods-type-box">
+                <template is="timelinedetail" data="{{timelineInfo:timelineInfoCurrent}}" />
+            </view>
+        </view>
+    </view>
+</view>
