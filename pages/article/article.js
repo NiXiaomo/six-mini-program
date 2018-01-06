@@ -1,5 +1,9 @@
 // pages/article/article.js
-var parser = require('../../utils/Parser.js');
+import { Article } from 'article-model.js';
+import { Model } from '../../utils/model.js';
+var article = new Article();
+var model = new Model();
+var WxParse = require('../../wxParse/wxParse.js');
 
 Page({
 
@@ -14,45 +18,33 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        // 弹窗
+        model.showModel();
+
         var id = options.id;
         this._loadData(id);
     },
 
     _loadData: function (id) {
-        var articles = wx.getStorageSync('articles');
-        // var body = parser.makeHtml(articles[0].body);
-        // console.log(body);
-        var index = this._search(articles, id);
-        // 封装数据
-        if (index < 0) {
-            var article = {
-                title: '404 Not Found',
-                body: '',
-                time: '该页面没有找到：id=' + id
-            };
-        } else {
-            var article = {
-                title: articles[index].title,
-                body: articles[index].body,
-                time: '最近更新于：' + articles[index].update_time
-            };
-        }
-        this.setData({
-            article: article
+        var that = this;
+        article.getArticleByID(id, (data) => {
+            this.setData({
+                article: {
+                    title: data.title,
+                    time: '最近更新于：' + data.update_time
+                }
+            });
+            WxParse.wxParse('article.body', 'md', data.body, that, 5);
+        }, (data) => {
+            this.setData({
+                article: {
+                    title: '404 Not Found',
+                    body: {
+                        nodes: ''
+                    },
+                    time: '该页面没有找到：id=' + id
+                }
+            });
         });
     },
-
-    /**
-     * 查找文章的index
-     */
-    _search: function (articles, id) {
-        for (var i = 0; i < articles.length; i++) {
-            if (articles[i].id == id) {
-                return i;
-            }
-        }
-
-        // 查找失败
-        return -1;
-    }
 })

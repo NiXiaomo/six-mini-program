@@ -1,4 +1,6 @@
 <!--pages/article/article.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+
 <view class="page">
     <view class="page__hd">
         <view class="page__title">{{article.title}}</view>
@@ -6,9 +8,7 @@
     </view>
     <view class="page__bd">
         <view class="weui-article">
-            <view class="weui-article__p">
-                {{article.body}}
-            </view>
+            <template is="wxParse" data="{{wxParseData:article.body.nodes}}" />
         </view>
     </view>
 </view>

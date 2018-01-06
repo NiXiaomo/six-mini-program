@@ -3,7 +3,6 @@ import { Base } from '../../utils/base.js';
 class Home extends Base {
     constructor() {
         super();
-        this._storageKeyName = 'articles';
     };
 
     // 获取文章
@@ -23,13 +22,6 @@ class Home extends Base {
         };
         this.request(params);
     };
-
-    /**
-     * 保存/更新本地缓存
-     */
-    execSetStorageSync(data) {
-        wx.setStorageSync(this._storageKeyName, data);
-    }
 }
 
 export { Home };

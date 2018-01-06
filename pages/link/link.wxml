@@ -2,7 +2,7 @@
 <view class="page">
     <view class="page__bd page__bd_spacing">
         <view class="kind-list">
-            <block wx:for="{{linkArr}}" wx:key="id">
+            <block wx:for="{{linkArr}}">
                 <view class="kind-list__item">
                     <view id="{{item.id}}" class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}" bindtap="kindToggle">
                         <view class="weui-flex__item">{{item.name}}</view>
@@ -10,7 +10,7 @@
                     </view>
                     <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
                         <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
-                            <block wx:for="{{item.links}}" wx:for-item="link" wx:key="*this">
+                            <block wx:for="{{item.links}}" wx:for-item="link">
                                 <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                                     <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
                                         <image class="avatar" src="{{link.logo_url}}" />

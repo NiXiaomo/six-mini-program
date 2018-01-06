@@ -1,11 +1,15 @@
 //app.js
+import { Model } from '/utils/model.js';
+
 App({
 
     /**
      * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
      */
     onLaunch: function () {
-
+        // 默认显示弹窗
+        var model = new Model();
+        model.allowModel();
     },
 
     /**

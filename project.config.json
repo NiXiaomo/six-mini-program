@@ -42,10 +42,10 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 3,
 					"name": "文章",
 					"pathName": "pages/article/article",
-					"query": ""
+					"query": "id=8"
 				}
 			]
 		}

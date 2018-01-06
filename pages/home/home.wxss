@@ -5,6 +5,7 @@
 }
 
 .article-title {
+    font-weight: bold;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

@@ -1,4 +1,4 @@
-//index.js
+// home.js
 import { Home } from 'home-model.js';
 var home = new Home();
 
@@ -26,8 +26,6 @@ Page({
                     this.setData({
                         articleArr: this.data.articleArr
                     });
-                    // 存入缓存
-                    home.execSetStorageSync(this.data.articleArr);
                     // 小于每页数量表示已加载完毕
                     if (data.length < this.data.pageSize) {
                         this.data.isLoadedAll = true;
