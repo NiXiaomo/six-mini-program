@@ -23,20 +23,20 @@
             },
             {
                 "pagePath": "pages/timeline/timeline",
-                "iconPath": "imgs/toolbar/category.png",
-                "selectedIconPath": "imgs/toolbar/category@selected.png",
+                "iconPath": "imgs/toolbar/timeline.png",
+                "selectedIconPath": "imgs/toolbar/timeline@selected.png",
                 "text": "时间轴"
             },
             {
                 "pagePath": "pages/tag/tag",
-                "iconPath": "imgs/toolbar/cart.png",
-                "selectedIconPath": "imgs/toolbar/cart@selected.png",
+                "iconPath": "imgs/toolbar/tag.png",
+                "selectedIconPath": "imgs/toolbar/tag@selected.png",
                 "text": "标签库"
             },
             {
                 "pagePath": "pages/link/link",
-                "iconPath": "imgs/toolbar/my.png",
-                "selectedIconPath": "imgs/toolbar/my@selected.png",
+                "iconPath": "imgs/toolbar/link.png",
+                "selectedIconPath": "imgs/toolbar/link@selected.png",
                 "text": "联系人"
             }
         ],
