@@ -4,6 +4,6 @@ class Config {
     }
 }
 
-Config.restUrl = 'http://api.biubiubiu.moe/v1/';
+Config.restUrl = 'https://api.nixiaomo.com/v1/';
 
 export { Config };
