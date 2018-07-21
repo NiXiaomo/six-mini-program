@@ -1,6 +1,5 @@
 /**app.wxss**/
 @import 'style/weui.wxss';
-@import "/wxParse/wxParse.wxss";
 
 page {
     background-color: #f8f8f8;

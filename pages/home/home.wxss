@@ -14,7 +14,7 @@
 }
 
 .article-tag {
-    margin-right: 10rpx;
+    margin: 0 5rpx;
     color: #337ab7;
 }
 
@@ -32,6 +32,10 @@
 .weui-media-box__desc {
     color: #333;
     font-size: 14px;
+}
+
+.weui-loadmore_line {
+    overflow: visible;
 }
 
 .weui-loadmore__tips_in-line {

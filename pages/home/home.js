@@ -33,6 +33,11 @@ Page({
                 } else {
                     this.data.isLoadedAll = true;
                 }
+
+				// 更新状态
+				this.setData({
+					isLoadedAll: this.data.isLoadedAll
+				});
             },
             (res) => {
                 // 如果加载失败，则页数回滚

@@ -1,14 +1,15 @@
 <!--pages/article/article.wxml-->
-<import src="../../wxParse/wxParse.wxml" />
+<!--引入towxml模版入口文件，并使用模版-->
+<import src="../../towxml/entry.wxml"/>
 
 <view class="page">
     <view class="page__hd">
-        <view class="page__title">{{article.title}}</view>
-        <view class="page__desc">{{article.time}}</view>
+        <view class="page__title">{{title}}</view>
+        <view class="page__desc">{{time}}</view>
     </view>
     <view class="page__bd">
         <view class="weui-article">
-            <template is="wxParse" data="{{wxParseData:article.body.nodes}}" />
+			<template is="entry" data="{{...article}}" />
         </view>
     </view>
 </view>

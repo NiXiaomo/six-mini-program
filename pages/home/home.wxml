@@ -28,12 +28,12 @@
                 </view>
             </view>
         </block>
-        <!-- <view wx:if='{{isLoadedAll}}' class="weui-loadmore weui-loadmore_line">
+        <view wx:if='{{isLoadedAll}}' class="weui-loadmore weui-loadmore_line">
             <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有更多数据</view>
         </view>
         <view wx:else class="weui-loadmore">
             <view class="weui-loading"></view>
             <view class="weui-loadmore__tips">正在加载</view>
-        </view> -->
+        </view>
     </view>
 </view>

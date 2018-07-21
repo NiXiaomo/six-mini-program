@@ -43,7 +43,7 @@
         "backgroundColor": "#FFFFFF",
         "selectedColor": "#AB956D",
         "color": "#989898",
-        "borderStyle": "white",
+        "borderStyle": "#F8F8F8",
         "position": "bottom"
     },
     "networkTimeout": {
